@@ -9,7 +9,7 @@ import {
   Camera,
   User,
   Target,
-  Funnel,
+  Filter,
   Megaphone
 } from "lucide-react";
 
@@ -56,7 +56,7 @@ export const areas = [
   },
   {
     title: "Funil de Marketing",
-    icon: Funnel,
+    icon: Filter,
     description: "Aprenda a criar e otimizar funis de vendas eficientes para converter leads em clientes fiéis"
   },
   {
