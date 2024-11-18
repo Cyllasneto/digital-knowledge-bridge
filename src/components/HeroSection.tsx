@@ -11,7 +11,7 @@ export const HeroSection = () => {
     <div className="relative min-h-[90vh] md:min-h-[80vh] flex items-center justify-center bg-primary text-white px-4 md:px-8 py-16 md:py-24">
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative z-10 text-center w-full max-w-5xl mx-auto space-y-8">
-        <h2 className="text-2xl sm:text-3xl font-bold animate-fade-up mb-4 text-secondary">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold animate-fade-up mb-8 text-secondary tracking-wide transform hover:scale-105 transition-transform duration-300">
           KP Marketing Digital
         </h2>
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold animate-fade-up leading-tight">
