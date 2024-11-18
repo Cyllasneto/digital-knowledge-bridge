@@ -14,28 +14,28 @@ const MarketingAreaDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-primary p-8">
+    <div className="min-h-screen bg-primary p-4 md:p-8">
       <div className="max-w-4xl mx-auto">
         <Button
           onClick={() => navigate('/')}
           variant="secondary"
-          className="mb-8"
+          className="mb-6 md:mb-8 hover:bg-secondary/90 transition-colors"
         >
           <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Home
         </Button>
 
-        <div className="bg-primary-dark rounded-lg p-8 text-white">
-          <div className="flex items-center gap-4 mb-6">
-            <areaDetails.icon className="w-16 h-16 text-secondary" />
-            <h1 className="text-4xl font-bold">{areaDetails.title}</h1>
+        <div className="bg-primary-dark rounded-lg p-6 md:p-8 text-white shadow-xl">
+          <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
+            <areaDetails.icon className="w-12 h-12 md:w-16 md:h-16 text-secondary" />
+            <h1 className="text-3xl md:text-4xl font-bold">{areaDetails.title}</h1>
           </div>
           
-          <p className="text-gray-300 text-lg mb-6">{areaDetails.description}</p>
+          <p className="text-gray-300 text-base md:text-lg mb-8">{areaDetails.description}</p>
           
           <div className="space-y-6">
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-secondary">O que é?</h2>
-              <p className="text-gray-300">
+              <h2 className="text-xl md:text-2xl font-semibold mb-4 text-secondary">O que é?</h2>
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                 {getAreaDescription(areaDetails.title)}
               </p>
             </section>
