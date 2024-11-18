@@ -34,10 +34,6 @@
   }
 }
 
-.gradient-bg {
-  background: linear-gradient(135deg, #9b87f5 0%, #7E69AB 100%);
-}
-
 .card-hover {
   @apply transition-transform duration-300 hover:scale-105;
 }
