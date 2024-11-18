@@ -8,7 +8,9 @@ import {
   MessageSquare, 
   Camera,
   User,
-  Target
+  Target,
+  Funnel,
+  Megaphone
 } from "lucide-react";
 
 export const areas = [
@@ -51,6 +53,16 @@ export const areas = [
     title: "Publicidade Digital",
     icon: Target,
     description: "Domine as principais plataformas de anúncios online e crie campanhas que geram resultados mensuráveis"
+  },
+  {
+    title: "Funil de Marketing",
+    icon: Funnel,
+    description: "Aprenda a criar e otimizar funis de vendas eficientes para converter leads em clientes fiéis"
+  },
+  {
+    title: "SEM",
+    icon: Megaphone,
+    description: "Domine o Marketing de Busca e crie campanhas pagas eficientes no Google Ads e outras plataformas"
   }
 ];
 
