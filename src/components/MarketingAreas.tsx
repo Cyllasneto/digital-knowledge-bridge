@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 import { 
   Search, 
   Share2, 
@@ -8,7 +9,7 @@ import {
   Camera 
 } from "lucide-react";
 
-const areas = [
+export const areas = [
   {
     title: "SEO",
     icon: Search,
@@ -42,6 +43,13 @@ const areas = [
 ];
 
 export const MarketingAreas = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (title: string) => {
+    const slug = title.toLowerCase().replace(/\s+/g, '-');
+    navigate(`/area/${slug}`);
+  };
+
   return (
     <section className="py-20 bg-primary-light">
       <div className="container mx-auto px-4">
@@ -50,7 +58,11 @@ export const MarketingAreas = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {areas.map((area) => (
-            <Card key={area.title} className="p-6 card-hover bg-primary-dark border-none">
+            <Card 
+              key={area.title} 
+              className="p-6 card-hover bg-primary-dark border-none cursor-pointer"
+              onClick={() => handleCardClick(area.title)}
+            >
               <area.icon className="w-12 h-12 text-secondary mb-4" />
               <h3 className="text-xl font-semibold mb-2 text-white">{area.title}</h3>
               <p className="text-gray-300">{area.description}</p>
