@@ -75,25 +75,28 @@ export const MarketingAreas = () => {
   };
 
   return (
-    <section id="marketing-areas" className="py-12 md:py-20 bg-primary-light px-4 md:px-8">
-      <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6 text-white">
-          Áreas do Marketing Digital
-        </h2>
-        <p className="text-base md:text-xl text-center mb-8 md:mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Explore as diferentes áreas do Marketing Digital e descubra como cada uma pode contribuir para seu sucesso profissional. 
-          De iniciante a especialista, oferecemos o conhecimento necessário para você se destacar no mercado.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
-          {areas.map((area) => (
+    <section id="marketing-areas" className="py-16 md:py-24 bg-primary-light px-4 md:px-8">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white animate-fade-up">
+            Áreas do Marketing Digital
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed animate-fade-up [animation-delay:200ms]">
+            Explore as diferentes áreas do Marketing Digital e descubra como cada uma pode contribuir para seu sucesso profissional. 
+            De iniciante a especialista, oferecemos o conhecimento necessário para você se destacar no mercado.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          {areas.map((area, index) => (
             <Card 
               key={area.title} 
-              className="p-6 card-hover bg-primary-dark border-none cursor-pointer transform transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl"
+              className="p-8 card-hover bg-primary-dark border-none cursor-pointer transform transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl animate-fade-up"
+              style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => handleCardClick(area.title)}
             >
-              <area.icon className="w-10 h-10 md:w-12 md:h-12 text-secondary mb-4" />
-              <h3 className="text-lg md:text-xl font-semibold mb-2 text-white">{area.title}</h3>
-              <p className="text-sm md:text-base text-gray-300 leading-relaxed">{area.description}</p>
+              <area.icon className="w-12 h-12 text-secondary mb-6" />
+              <h3 className="text-xl font-semibold mb-4 text-white">{area.title}</h3>
+              <p className="text-gray-300 leading-relaxed">{area.description}</p>
             </Card>
           ))}
         </div>

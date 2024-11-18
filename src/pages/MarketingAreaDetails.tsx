@@ -10,32 +10,45 @@ const MarketingAreaDetails = () => {
   const areaDetails = areas.find((a) => a.title.toLowerCase().replace(/\s+/g, '-') === area);
 
   if (!areaDetails) {
-    return <div>Área não encontrada</div>;
+    return (
+      <div className="min-h-screen bg-primary flex items-center justify-center p-4">
+        <div className="text-center text-white">
+          <h1 className="text-2xl font-bold mb-4">Área não encontrada</h1>
+          <Button
+            onClick={() => navigate('/')}
+            variant="secondary"
+            className="hover:bg-secondary/90 transition-colors"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Home
+          </Button>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="min-h-screen bg-primary p-4 md:p-8">
+    <div className="min-h-screen bg-primary p-4 md:p-8 py-16">
       <div className="max-w-4xl mx-auto">
         <Button
           onClick={() => navigate('/')}
           variant="secondary"
-          className="mb-6 md:mb-8 hover:bg-secondary/90 transition-colors"
+          className="mb-8 hover:bg-secondary/90 transition-colors"
         >
           <ArrowLeft className="mr-2 h-4 w-4" /> Voltar para Home
         </Button>
 
-        <div className="bg-primary-dark rounded-lg p-6 md:p-8 text-white shadow-xl">
-          <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">
-            <areaDetails.icon className="w-12 h-12 md:w-16 md:h-16 text-secondary" />
-            <h1 className="text-3xl md:text-4xl font-bold">{areaDetails.title}</h1>
+        <div className="bg-primary-dark rounded-lg p-8 md:p-12 text-white shadow-xl animate-fade-up">
+          <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
+            <areaDetails.icon className="w-16 h-16 md:w-20 md:h-20 text-secondary" />
+            <h1 className="text-4xl md:text-5xl font-bold">{areaDetails.title}</h1>
           </div>
           
-          <p className="text-gray-300 text-base md:text-lg mb-8">{areaDetails.description}</p>
+          <p className="text-gray-300 text-lg md:text-xl mb-12 leading-relaxed">{areaDetails.description}</p>
           
-          <div className="space-y-6">
+          <div className="space-y-8">
             <section>
-              <h2 className="text-xl md:text-2xl font-semibold mb-4 text-secondary">O que é?</h2>
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-secondary">O que é?</h2>
+              <p className="text-gray-300 text-lg leading-relaxed">
                 {getAreaDescription(areaDetails.title)}
               </p>
             </section>
