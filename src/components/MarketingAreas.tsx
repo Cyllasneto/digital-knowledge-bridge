@@ -13,32 +13,32 @@ export const areas = [
   {
     title: "SEO",
     icon: Search,
-    description: "Otimize seu site para os mecanismos de busca"
+    description: "Domine as técnicas de otimização para mecanismos de busca e aumente sua visibilidade online de forma orgânica"
   },
   {
     title: "Mídias Sociais",
     icon: Share2,
-    description: "Gerencie e cresça suas redes sociais"
+    description: "Aprenda a criar estratégias eficientes para as principais redes sociais e construa uma presença digital impactante"
   },
   {
     title: "Email Marketing",
     icon: Mail,
-    description: "Construa relacionamentos através de emails"
+    description: "Desenvolva campanhas de email marketing eficazes para nutrir leads e converter clientes"
   },
   {
     title: "Marketing de Conteúdo",
     icon: MessageSquare,
-    description: "Crie conteúdo que engaja e converte"
+    description: "Crie conteúdo relevante e estratégico que atrai, engaja e converte sua audiência"
   },
   {
     title: "Marketing de Performance",
     icon: TrendingUp,
-    description: "Maximize seus resultados com anúncios"
+    description: "Aprenda a criar e otimizar campanhas pagas para maximizar seu retorno sobre investimento"
   },
   {
     title: "Marketing Visual",
     icon: Camera,
-    description: "Comunique sua marca visualmente"
+    description: "Desenvolva uma identidade visual forte e crie conteúdo visual que se destaca e gera resultados"
   }
 ];
 
@@ -53,9 +53,13 @@ export const MarketingAreas = () => {
   return (
     <section id="marketing-areas" className="py-20 bg-primary-light">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">
+        <h2 className="text-4xl font-bold text-center mb-6 text-white">
           Áreas do Marketing Digital
         </h2>
+        <p className="text-xl text-center mb-12 text-gray-300 max-w-3xl mx-auto">
+          Explore as diferentes áreas do Marketing Digital e descubra como cada uma pode contribuir para seu sucesso profissional. 
+          De iniciante a especialista, oferecemos o conhecimento necessário para você se destacar no mercado.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {areas.map((area) => (
             <Card 
