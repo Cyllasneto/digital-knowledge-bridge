@@ -51,7 +51,7 @@ export const MarketingAreas = () => {
   };
 
   return (
-    <section className="py-20 bg-primary-light">
+    <section id="marketing-areas" className="py-20 bg-primary-light">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
           Áreas do Marketing Digital

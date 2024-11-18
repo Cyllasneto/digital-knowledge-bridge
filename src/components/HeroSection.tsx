@@ -2,6 +2,11 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const HeroSection = () => {
+  const scrollToMarketingAreas = () => {
+    const marketingAreasSection = document.querySelector('#marketing-areas');
+    marketingAreasSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center bg-primary text-white">
       <div className="absolute inset-0 bg-black/30" />
@@ -12,7 +17,10 @@ export const HeroSection = () => {
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
           Aprenda as estratégias mais eficazes para crescer sua presença online e aumentar seus resultados
         </p>
-        <Button className="bg-secondary text-white hover:bg-secondary-dark text-lg px-8 py-6">
+        <Button 
+          className="bg-secondary text-white hover:bg-secondary-dark text-lg px-8 py-6"
+          onClick={scrollToMarketingAreas}
+        >
           Começar Agora <ArrowRight className="ml-2" />
         </Button>
       </div>
