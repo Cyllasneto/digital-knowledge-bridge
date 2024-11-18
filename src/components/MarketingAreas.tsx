@@ -6,7 +6,9 @@ import {
   Mail, 
   TrendingUp, 
   MessageSquare, 
-  Camera 
+  Camera,
+  User,
+  Target
 } from "lucide-react";
 
 export const areas = [
@@ -39,6 +41,16 @@ export const areas = [
     title: "Marketing Visual",
     icon: Camera,
     description: "Desenvolva uma identidade visual forte e crie conteúdo visual que se destaca e gera resultados"
+  },
+  {
+    title: "UX Design",
+    icon: User,
+    description: "Aprenda a criar experiências digitais centradas no usuário que aumentam a satisfação e a conversão"
+  },
+  {
+    title: "Publicidade Digital",
+    icon: Target,
+    description: "Domine as principais plataformas de anúncios online e crie campanhas que geram resultados mensuráveis"
   }
 ];
 
@@ -60,7 +72,7 @@ export const MarketingAreas = () => {
           Explore as diferentes áreas do Marketing Digital e descubra como cada uma pode contribuir para seu sucesso profissional. 
           De iniciante a especialista, oferecemos o conhecimento necessário para você se destacar no mercado.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8">
           {areas.map((area) => (
             <Card 
               key={area.title} 
