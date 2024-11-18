@@ -27,7 +27,7 @@ const investimentData = [
 
 export const MarketingStats = () => {
   return (
-    <section className="py-16 md:py-24 bg-primary px-4 md:px-8">
+    <section id="marketing-stats" className="py-16 md:py-24 bg-primary px-4 md:px-8">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white text-center animate-fade-up">
           Estatísticas do Marketing Digital

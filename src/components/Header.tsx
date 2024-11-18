@@ -15,6 +15,9 @@ export const Header = () => {
             <a href="#marketing-areas" className="text-white hover:text-secondary transition-colors">
               Áreas
             </a>
+            <a href="#marketing-stats" className="text-white hover:text-secondary transition-colors">
+              Estatísticas
+            </a>
           </nav>
         </div>
       </div>
