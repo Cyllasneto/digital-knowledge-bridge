@@ -5,10 +5,7 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-secondary tracking-wide hover:scale-105 transition-transform duration-300">
-            KP Marketing Digital
-          </Link>
-          <nav className="hidden md:flex space-x-8">
+          <nav className="flex space-x-8">
             <Link to="/" className="text-white hover:text-secondary transition-colors">
               Início
             </Link>
